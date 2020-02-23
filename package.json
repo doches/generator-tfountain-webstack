@@ -1,0 +1,35 @@
+{
+  "name": "generator-tfountain-webstack",
+  "version": "0.0.1",
+  "description": "A Yeoman generator for @doches' typical frontend stack",
+  "main": "app/index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/doches/generator-tfountain-webstack"
+  },
+  "bugs": "https://github.com/doches/generator-tfountain-webstack/issues",
+  "homepage": "https://github.com/doches/generator-tfountain-webstack/",
+  "author": {
+    "name": "Trevor Fountain",
+    "email": "trevor@texasexpat.net",
+    "url": "http://texasexpat.net"
+  },
+  "license": "MIT",
+  "private": false,
+  "dependencies": {
+    "chalk": "^3.0.0",
+    "yeoman-generator": "^4.5.0",
+    "yosay": "^2.0.2"
+  },
+  "files": [
+    "app"
+  ],
+  "keywords": [
+    "yeoman-generator",
+    "typescript",
+    "react",
+    "less",
+    "webpack",
+    "frontend"
+  ]
+}
