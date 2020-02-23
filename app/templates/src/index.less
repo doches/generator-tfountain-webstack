@@ -1,5 +1,25 @@
-@red: #e03010;
+@grid-size: 16px;
+@border-radius: 4px;
+
+@pale-white: #ebf1f5;
+@magic-blue: #182026;
+
+.text {
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+    font-weight: 300;
+}
 
 body {
-    background-color: @red;
+    background-color: @magic-blue;
+    color: @pale-white;
+    padding: @grid-size;
+
+    .text;
+
+    ul {
+        list-style-type: none;
+        line-height: 1.5em;
+        font-size: 18px;
+        text-shadow: 0 0 0 black;
+    }
 }

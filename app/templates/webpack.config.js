@@ -34,6 +34,11 @@ module.exports = {
             }
         ],
     },
+    devServer: {
+        contentBase: path.join(__dirname, "src"),
+        hot: true,
+        open: true,
+    },
     output: {
         path: path.resolve(__dirname, "dist"),
         filename: "app-[hash].js",

@@ -26,3 +26,5 @@ Answer a couple of easy questions, and you'll be greeted with a ready-to-rock pr
 * **Webpack 4.x** -- You prefer Rollup? Browserify? Parcel? Gulp? Grunt? _(!?)_ Great! I prefer Webpack.
 * **Less** -- Writing straight CSS is madness, and Sass is just too much of a good thing.
 * **React 16.x** -- It's dangerous to go alone. Here, take all of Facebook's domain knowledge and best practices with you.
+* **Babel 7.x** -- Pick a Javascript, any Javascript
+* **ESLint 6.x** -- Look, we all make mistakes, ok?

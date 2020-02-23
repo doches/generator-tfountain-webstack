@@ -9,7 +9,9 @@
     "build": "npm-run-all clean compile",
     "compile": "webpack",
     "start": "webpack-dev-server",
-    "clean": "rimraf dist"
+    "clean": "rimraf dist",
+    "lint": "eslint src/ --ext .ts,.tsx,.js,.jsx",
+    "lint:fix": "eslint src/ --ext .ts,.tsx,.js,.jsx --fix"
   },
   "devDependencies": {
     "@babel/core": "^7",
@@ -18,8 +20,13 @@
     "@babel/preset-typescript": "^7",
     "@types/react": "^16",
     "@types/react-dom": "^16",
+    "@typescript-eslint/eslint-plugin": "^2",
+    "@typescript-eslint/parser": "^2",
     "babel-loader": "^8",
     "css-loader": "^3",
+    "eslint": "^6",
+    "eslint-loader": "^3",
+    "eslint-plugin-react": "^7",
     "file-loader": "^5",
     "html-webpack-plugin": "^3",
     "less": "^3",

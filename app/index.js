@@ -57,7 +57,7 @@ module.exports = class extends Generator {
     }
 
     writing() {
-        // Files to copy as-is
+        // Files to copy 
         var files = [
             "package.json",
             "tsconfig.json",
@@ -74,15 +74,18 @@ module.exports = class extends Generator {
             );
         }
 
-        // Other files
-        this.fs.copy(
-            this.templatePath('gitignore'),
-            this.destinationPath('.gitignore')
-        );
-        this.fs.copy(
-            this.templatePath('babelrc'),
-            this.destinationPath('.babelrc')
-        );
+        // Hidden files
+        var hiddenFiles = [
+            "gitignore",
+            "babelrc",
+            "eslintrc.js",
+        ];
+        for (var i = 0; i < hiddenFiles.length; i++) {
+            this.fs.copy(
+                this.templatePath(hiddenFiles[i]),
+                this.destinationPath(`.${hiddenFiles[i]}`),
+            );
+        }
     }
 
     install () {
@@ -91,7 +94,11 @@ module.exports = class extends Generator {
             _this.spawnCommand('git', ['add', '*']).on("close", function() {
                 _this.spawnCommand('git', ['commit', '-am', '\"Initial Commit\"']).on("close", function() {
                     _this.spawnCommand('git', ['tag', '0.0.0']).on("close", function() {
-                        _this.spawnCommand('yarn', ['install']);
+                        _this.spawnCommand('yarn', ['install']).on("close", function() {
+                            _this.log(
+                                `${chalk.cyan(_this.props.name)} is ready to 🤘. Run \`${chalk.yellow("yarn start")}\` to get started.`
+                            );
+                        });
                     });
                 });
             });
