@@ -37,6 +37,7 @@
     "typescript": "^3",
     "url-loader": "^3",
     "webpack": "^4",
+    "webpack-cli": "^3",
     "webpack-dev-server": "^3"
   },
   "dependencies": {
