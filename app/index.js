@@ -46,6 +46,10 @@ module.exports = class extends Generator {
             name: 'description',
             message: 'Project description',
             default: ""
+        }, {
+            type: 'confirm',
+            name: "redux",
+            message: "Use redux?"
         }];
 
         const answers = await this.prompt(prompts)
@@ -54,6 +58,7 @@ module.exports = class extends Generator {
         this.props.slug = kebabcase(answers.name)
         this.props.name = answers.name
         this.props.description = answers.description
+        this.props.redux = answers.redux
     }
 
     writing() {

@@ -20,6 +20,11 @@
     "@babel/preset-typescript": "^7",
     "@types/react": "^16",
     "@types/react-dom": "^16",
+    <% if (redux) { %>
+    "@types/react-redux": "^7.1.8",
+    "@types/react-router": "^5.1.7",
+    "@types/react-router-dom": "^5.1.5",
+    <% } %>
     "@typescript-eslint/eslint-plugin": "^2",
     "@typescript-eslint/parser": "^2",
     "babel-loader": "^8",
@@ -41,7 +46,19 @@
     "webpack-dev-server": "^3"
   },
   "dependencies": {
+    <% if (redux) { %>
+    "@majeure/typed-actions": "^0.0.1",
+    "react-redux": "^7.2.0",
+    "redux": "^4.0.5",
+    "redux-logger": "^3.0.6",
+    "redux-thunk": "^2.3.0",
+    "react-router-dom": "^5.2.0",
+    "react-router-redux": "^5.2.0",
+    "react-router": "^5.2.0",
+    <% } %>
+    "moment": "^2.24.0",
     "react": "^16",
-    "react-dom": "^16"
+    "react-dom": "^16",
+    "history": "^4.10.1"
   }
 }
