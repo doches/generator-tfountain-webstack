@@ -69,8 +69,19 @@ module.exports = class extends Generator {
             "webpack.config.js",
             "src/app.tsx",
             "src/index.less",
-            "src/index.tsx"
+            "src/index.tsx",
         ];
+
+        if (this.props.redux) {
+            files = [
+                ...files,
+                "src/state/api.ts",
+                "src/state/index.ts",
+                "src/state/reducers.ts",
+                "src/state/state.ts",
+            ];
+        }
+
         for (var i = 0; i < files.length; i++) {
             this.fs.copyTpl(
                 this.templatePath(files[i]),
