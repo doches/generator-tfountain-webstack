@@ -1,9 +1,15 @@
 {
   "compilerOptions": {
     "target": "es5",
-    "module": "es6",
+    "module": "commonjs",
     "jsx": "react",
-    "strict": true,
+    "allowJs": true,
+    "allowSyntheticDefaultImports": true,
+    "lib": [
+      "ES2015.Promise",
+      "ES5",
+      "DOM"
+    ],
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true
   }

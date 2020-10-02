@@ -59,9 +59,8 @@ function buildConfig(args) {
                 ],
                 mobile: true,
                 lang: "en-GB",
-                title: "<%= slug %>",
+                title: "<%= name %>",
                 scripts: [
-                    "https://js.stripe.com/v3/",
                 ],
             }),
             new CopyPlugin([
