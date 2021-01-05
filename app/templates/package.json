@@ -63,11 +63,11 @@
     "react-router-redux": "^4",
     "react-router": "^5.2.0",
     <% } %>
-    "moment": "^2.24.0",
+    "moment": "^2.29.0",
     "react": "^16",
     "react-dom": "^16",
     "history": "^4.10.1",
-    "lodash-es": "^4",
-    "core-js": "3"
+    "lodash-es": "4.17.15",
+    "core-js": "3.6.5"
   }
 }
