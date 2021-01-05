@@ -95,6 +95,7 @@ module.exports = class extends Generator {
             "gitignore",
             "babelrc",
             "eslintrc.js",
+            "editorconfig",
         ];
         for (var i = 0; i < hiddenFiles.length; i++) {
             this.fs.copy(
