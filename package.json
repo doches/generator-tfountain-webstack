@@ -1,6 +1,6 @@
 {
   "name": "generator-tfountain-webstack",
-  "version": "0.0.7",
+  "version": "0.1.0",
   "description": "A Yeoman generator for @doches' typical frontend stack",
   "main": "app/index.js",
   "repository": {

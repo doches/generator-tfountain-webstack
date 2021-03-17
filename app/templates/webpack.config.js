@@ -1,4 +1,5 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
 const path = require("path");
@@ -8,7 +9,7 @@ function buildConfig(args) {
         entry: './src/index.tsx',
         output: {
             path: path.resolve(__dirname, 'dist'),
-            filename: 'app.[hash].js'
+            filename: 'app.[fullhash].js'
         },
         resolve: {
             extensions: ['.ts', '.tsx', '.js', '.json']
@@ -44,7 +45,7 @@ function buildConfig(args) {
         },
         plugins: [
             new HtmlWebpackPlugin({
-                inject: false,
+                inject: true,
                 template: require("html-webpack-template"),
                 devServer: (args && args.production) ? undefined : "http://localhost:8080",
                 meta: [
@@ -77,6 +78,7 @@ function buildConfig(args) {
                 minimizer: [new TerserPlugin({
                     extractComments: "all",
                 })],
+                usedExports: true,
             },
         };
     }
